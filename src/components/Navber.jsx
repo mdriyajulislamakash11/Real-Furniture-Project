@@ -2,25 +2,32 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 
 const navItems = [
-  {path: '/', label: 'furnituire'},
-  {path: '/shope', label: 'shope'},
-  {path: '/about', label: 'About Us'},
-  {path: '/Contact', label: 'Contact Us'},
-]
+  { path: "/", label: "furnituire" },
+  { path: "/shope", label: "shope" },
+  { path: "/about", label: "About Us" },
+  { path: "/Contact", label: "Contact Us" },
+];
 
 const NavItems = () => {
   return (
     <ul className="flex flex-col md:flex-row items-center md:space-x-8 ">
-      {
-        navItems.map((item, index) => (
-          <li key={index}>
-            <NavLink to={item.path}>{item.label}</NavLink>
-          </li>
-        ))
-      }
+      {navItems.map((item, index) => (
+        <li key={index}>
+          <NavLink
+            className={({ isActive}) =>
+              isActive 
+            ? "text-primary font-bold" 
+            : "hover:text-primary"
+            }
+            to={item.path}
+          >
+            {item.label}
+          </NavLink>
+        </li>
+      ))}
     </ul>
-  )
-}
+  );
+};
 
 const Navber = () => {
   return (
@@ -36,9 +43,7 @@ const Navber = () => {
 
           {/* menu item */}
           <div>
-          
             <NavItems />
-          
           </div>
 
           {/* cart */}
