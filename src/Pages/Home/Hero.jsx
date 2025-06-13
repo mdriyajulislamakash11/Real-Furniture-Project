@@ -1,6 +1,7 @@
 import React from "react";
 import bannerImage from "../../assets/banner.png";
 import { FaSearch } from "react-icons/fa";
+import TooltipButton from "../../components/TooltipButton";
 
 const Hero = () => {
   return (
@@ -36,18 +37,14 @@ const Hero = () => {
 
       {/* hover button for displaying box  */}
       {/* <BasicToolTip/> */}
-      <div className="absolute bottom-40 left-24 group">
-        <button className="relative p-4 bg-white/25 rounded-full border text-xl">
-          🎨
-          <div className="hidden absolute bottom-full left-1/2 transform -translate-x-1/2 mb-3 p-2 rounded-lg bg-white/25 shadow-md group-hover:flex gap-2">
-            <div className="size-6 bg-red-700 border border-white rounded-full"></div>
-            <div className="size-6 bg-green-700 border border-white rounded-full"></div>
-            <div className="size-6 bg-blue-700 border border-white rounded-full"></div>
-
-            {/* tooltip arrow */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 -bottom-2 w-0 h-0 border-1-8 border-r-8 border-l-transparent border-r-transparent border-t-8 border-t-white/35" />
-          </div>
-        </button>
+      <div className="hidden xl:block absolute bottom-40 left-24">
+        <TooltipButton position="bottom" />
+      </div>
+      <div className="hidden xl:block absolute bottom-52 left-96">
+        <TooltipButton position="bottom" />
+      </div>
+      <div className="hidden xl:block absolute bottom-24 right-[820px]">
+        <TooltipButton position="bottom" />
       </div>
     </div>
   );
