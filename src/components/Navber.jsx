@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import { FaShoppingBag } from "react-icons/fa";
+import { FaBars, FaShoppingBag } from "react-icons/fa";
 
 const navItems = [
   { path: "/", label: "furnituire" },
@@ -40,6 +40,11 @@ const Navber = () => {
             <Link className="font-bold" to="/">
               logo
             </Link>
+          </div>
+
+          {/* hamburger menu */}
+          <div className="md:hidden text-xl cursor-pointer hover:text-primary">
+            <FaBars />
           </div>
 
           {/* menu item */}
