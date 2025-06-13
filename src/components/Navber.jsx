@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import { FaBars, FaShoppingBag, FaTimes } from "react-icons/fa";
 
 const navItems = [
-  { path: "/", label: "furnituire" },
+  { path: "/", label: "furniture" },
   { path: "/shope", label: "shope" },
   { path: "/about", label: "About Us" },
   { path: "/Contact", label: "Contact Us" },

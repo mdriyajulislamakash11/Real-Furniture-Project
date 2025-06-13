@@ -31,11 +31,18 @@ const Hero = () => {
         </div>
       </div>
 
-       {/* bottom blure effect */}
+      {/* bottom blure effect */}
       <div className="absolute inset-x-0 bottom-0 h-3/4 -mb-2 bg-gradient-to-t from-white via-transparent to-transparent blur-sm" />
 
-
-   
+      {/* hover button for displaying box  */}
+      {/* <BasicToolTip/> */}
+      <div className="absolute bottom-40 left-24 group:">
+        <button className="relative p-4 bg-white/25 rounded-full border border-1 text-xl ">
+            <div className="hidden absolute bottom-full left-1/2 transform -translate-x-1/2 mb-3 p-2 rounded-lg bg-white/25 shadow-md group-hover:flex">
+              <div className="size-6 bg-red-700 border border-white rounded-full" />
+            </div>
+        </button>
+      </div>
     </div>
   );
 };
