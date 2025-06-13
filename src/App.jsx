@@ -11,9 +11,9 @@ function App() {
         <Navber />
       </div>
       {/* main Layoutes */}
-      <div>
+      <main className="min-h-screen">
         <Outlet />
-      </div>
+      </main>
       {/* footer */}
       <div>
         <Footer />
